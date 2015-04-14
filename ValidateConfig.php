@@ -10,6 +10,10 @@ $config = [
     'c' => [
         'internal_a' => 'not empty',
         'internal_b' => '',
+        'internal_c' => [
+            'sub_a' => '',
+            'sub_b' => 'sub b',
+        ],
     ],
     'd' => 'Ramsden',
 ];
@@ -17,7 +21,7 @@ $config = [
 $requiredKeyStrucutre = [
     'a',
     ['b', [0, 1, 2]],
-    ['c', ['internal_a', 'internal_b']],
+    ['c', ['internal_a', 'internal_b', ['internal_c', ['sub_a', 'sub_b']]]],
     'd',
 ];
 
